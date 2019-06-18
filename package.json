@@ -1,5 +1,5 @@
 {
-  "name": "@rm/theme",
+  "name": "@rm/ui-theme",
   "version": "1.0.0",
   "description": "Generic theme to add styles to all @rm components",
   "main": "lib/index.scss",
