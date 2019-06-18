@@ -5,9 +5,13 @@
   "main": "lib/index.scss",
   "scripts": {
     "clean:lib": "rimraf ./lib/*",
-    "lib": "cpx \"./src/**/*.scss\" lib/",
-    "lint": "sui-lint sass",
-    "phoenix": "rimraf node_modules && npm i"
+    "lib": "npm run lib:styles",
+    "lib:styles": "cpx \"./src/**/*.scss\" lib/",
+    "lint": "npm run lint:sass",
+    "lint:sass": "sui-lint sass",
+    "phoenix": "rimraf node_modules && npm i",
+    "prelib": "npm run clean:lib -s",
+    "prepublish": "npm run lib"
   },
   "repository": {
     "type": "git",
