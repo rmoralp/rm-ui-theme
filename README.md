@@ -10,14 +10,14 @@ This repository contains:
 Import `rm-ui-theme` into your sui-component including the path in `index.scss`:
 
 ```
-@import '../node_modules/@rm/theme/lib/index';
+@import '../node_modules/@rmoral/theme/lib/index';
 ```
 
 If you want to customize your components, create your own theme and add it to your component just __before__ the sui-theme import.
 
 ```
 @import '../custom-settings';
-@import '~@rm/theme/lib/index';
+@import '~@rmoral/theme/lib/index';
 ```
 
 ## Update

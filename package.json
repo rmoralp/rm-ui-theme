@@ -1,7 +1,7 @@
 {
-  "name": "@rm/ui-theme",
+  "name": "@rmoral/ui-theme",
   "version": "1.0.0",
-  "description": "Generic theme to add styles to all @rm components",
+  "description": "Generic theme to add styles to all @rmoral components",
   "main": "lib/index.scss",
   "scripts": {
     "clean:lib": "rimraf ./lib/*",
