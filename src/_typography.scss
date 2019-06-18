@@ -1,0 +1,54 @@
+$f-font-path-fonts: 'https://s.ccdn.es/fonts/open-sans-latin-';
+
+@mixin font-face($font-family, $weight, $style, $f-local-font-names: ()) {
+  $f-local-fonts: '';
+  $f-font-weight: $weight;
+
+  @if length($f-local-font-names) > 0 {
+    @each $f-local-font-name in $f-local-font-names {
+      $f-local-fonts: append($f-local-font-name, $f-local-fonts, comma);
+  	}
+  }
+
+  @if $style == 'italic' {
+    $f-font-weight: $weight + 'i';
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: '#{$font-family}';
+    font-style: #{$style};
+    font-weight: #{$weight};
+    src: #{$f-local-fonts}
+    url('#{$f-font-path-fonts}#{$f-font-weight}.woff2') format('woff2'),
+    url('#{$f-font-path-fonts}#{$f-font-weight}.woff') format('woff'),
+    url('#{$f-font-path-fonts}#{$f-font-weight}.ttf') format('truetype'),
+    url('#{$f-font-path-fonts}#{$f-font-weight}.eot') format('embedded-opentype');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+}
+
+$f-local-regular-fonts: (
+  local('OpenSans-Regular'),
+  local('Open Sans Regular')
+);
+
+$f-local-regular-i-fonts: (
+  local('OpenSans-Italic'),
+  local('Open Sans Italic')
+);
+
+$f-local-semi-bold-fonts: (
+  local('OpenSans-SemiBold'),
+  local('Open Sans SemiBold')
+);
+
+$f-local-bold-fonts: (
+  local('OpenSans-Bold'),
+  local('Open Sans Bold')
+);
+
+$f-local-bold-i-fonts: (
+  local('OpenSans-BoldItalic'),
+  local('Open Sans Bold Italic')
+);

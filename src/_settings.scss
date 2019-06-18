@@ -1,0 +1,24 @@
+// # Theme Variables
+// --------------------------------------------------
+// The naming convention used for variables is based on Emmet.
+// See [Emmet cheat sheet](http://docs.emmet.io/cheat-sheet/)
+//
+// Some of the prefixes used:
+// * bg = background
+// * bgc = background-color
+// * c = color
+// * ff = font-family
+// * fw = font-weight
+// * fz = font-size
+// * lh = line-height
+// * m = margin
+// * p = padding
+
+// URLs
+$url-statics: '' !default;
+
+@import './settings/box';
+@import './settings/colors';
+@import './settings/font';
+@import './settings/opacity';
+@import './settings/spacing';
