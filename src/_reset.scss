@@ -26,6 +26,8 @@
   font-family: inherit;
   padding: 0;
   user-select: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent; 
 
   &:focus {
     outline: 0;
